@@ -7,6 +7,7 @@
 </head>
 <body>
   <h4 style="text-align: center; font-family: Arial, sans-serif; margin-bottom: 20px; color: #333;">Brüel & Kjær 5128</h4>
+  <h4 style="text-align: center; font-family: Arial, sans-serif; margin-bottom: 20px; color: #333;">Bose Quietcomfort Ultra</h4>
   <!-- Chart Container -->
   <div id="chart-container" style="position: relative; width: 100%; max-width: 800px; margin: 0 auto;">
     <canvas id="frequencyChart"></canvas>
@@ -39,8 +40,8 @@
       }
 
       // Step 2: Create the Chart
-      const dataPoints1 = await loadCSV('Skullcandy Crusher ANC 2.csv');
-      const dataPoints2 = await loadCSV('Technowant preference curve.csv');
+      const dataPoints1 = await loadCSV('Bose Quietcomfort Ultra (ANC).csv');
+      const dataPoints2 = await loadCSV('Bose Quietcomfort Ultra (isolation).csv');
 
       // Custom plugin for the logo
       const logoPlugin = {
@@ -83,7 +84,7 @@
         data: {
           datasets: [
             {
-              label: 'Skullcandy Crusher ANC 2',
+              label: 'ANC',
               data: dataPoints1,
               borderColor: 'rgba(75, 192, 192, 1)',
               backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -92,7 +93,7 @@
               tension: 0.9
             },
             {
-              label: 'Technowant preference curve',
+              label: 'Isolation',
               data: dataPoints2,
               borderColor: 'red',
               borderDash: [10, 5],
@@ -124,10 +125,10 @@
             y: {
               title: {
                 display: true,
-                text: 'dB (Relative)'
+                text: 'dB (Attenuation)'
               },
-              min: -20,
-              max: 20,
+              min: -10,
+              max: 60,
               ticks: {
                 stepSize: 5
               }
