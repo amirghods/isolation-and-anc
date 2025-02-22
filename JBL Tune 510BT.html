@@ -6,7 +6,7 @@
   <title>Responsive Frequency Response Chart</title>
 </head>
 <body>
-  <h4 style="text-align: center; font-family: Arial, sans-serif; margin-bottom: 20px; color: #333;">Sony WH-XB910N (Isolation & ANC)</h4>
+  <h4 style="text-align: center; font-family: Arial, sans-serif; margin-bottom: 20px; color: #333;">JBL Tune 510BT (Isolation)</h4>
   <!-- Chart Container -->
   <div id="chart-container" style="position: relative; width: 100%; max-width: 800px; margin: 0 auto;">
     <canvas id="frequencyChart"></canvas>
@@ -39,8 +39,8 @@
       }
 
       // Step 2: Create the Chart
-      const dataPoints1 = await loadCSV('Sony wh-xb910n (ANC).csv');
-      const dataPoints2 = await loadCSV('Sony wh-xb910n(Isolation).csv');
+      const dataPoints1 = await loadCSV('');
+      const dataPoints2 = await loadCSV('JBL Tune 510BT (Isolation).csv');
 
       // Custom plugin for the logo
       const logoPlugin = {
